@@ -22,6 +22,7 @@ pyautogui.moveRel(100, 0, duration=.5)
 """
 Localizar um item na tela
 """
+#salva o codigo
 btnXY = pyautogui.locateCenterOnScreen('./aula7/btn_edit.png')
 pyautogui.click(btnXY, duration=.2)
 btnXY = pyautogui.locateCenterOnScreen('./aula7/btnSave.png')
