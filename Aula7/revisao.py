@@ -1,5 +1,5 @@
 #instalar o pyautogui
-#pip insltall pyautogui
+#pip install pyautogui
 
 import pyautogui
 
