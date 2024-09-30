@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="Exercicio1.css">
+</head>
+<body>
+    <h1>Cadastro de Notas</h1>
+    <hr>
+    <form action="">
+
+        <label for="">Nome</label>
+        <input type="text" name="nome" class="campos">
+        
+        <label for="">Nota</label>
+        <input type="number" name="nota" class="campos">
+        
+        <button id="salvar" type="button">Salvar</button>
+    </form>
+
+    <table id="notas">
+        <tr><td>Nome</td>                <td>Nota</td></tr>
+        <tr class="cinza"><td>Matheus</td>             <td>10</td></tr>
+        <tr><td>Giovana</td>             <td>10</td></tr>
+        <tr class="cinza"><td>Fabio</td>               <td>6</td></tr>
+    </table>
+    <script>
+            //Procura o botão na pagina
+        var elementBtn = document.querySelector("#salvar");
+            //adiciona um ouvinte de eventos
+            //se "ouvir" um click, executa uma função
+        elementBtn.addEventListener('click', function(){
+            var campoNome = document.querySelector('input[name="nome"]');
+            var campoNota = document.querySelector('input[name="nota"]');
+
+            var tabela = document.querySelector("#notas");
+            var tbody = document.querySelector('tbody');
+            
+            var linha = tbody.insertRow();
+            var celula1 = linha.insertCell();
+            var celula2 = linha.insertCell();
+            //Adiciona na tabela o nome e a nota do aluno
+            celula1.innerText = campoNome.value;
+            celula2.innerText = campoNota.value;
+
+            alert(campoNome.value + ' Você tirou a nota ' + campoNota.value);  
+        });
+    </script>
+</body>
+</html>
